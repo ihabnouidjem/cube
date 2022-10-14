@@ -1,0 +1,45 @@
+
+
+
+.copiedtoclipboard{
+    position:fixed;
+    left:calc((100% - 300px)/2);
+    height:50px;
+    width:300px;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    box-shadow: 0 0 4px var(--black);
+    border-radius: 30px;
+    animation: 4s copied;
+    bottom:-60px;
+    z-index:5000;
+
+}
+.copiedtoclipboard > p{
+    font-size:22px;
+    font-weight: 600;
+    color:white;
+    margin-inline: 4px;
+}
+.copiedtoclipboard > i{
+    color:rgb(50 255 50 / 1);
+}
+
+
+@keyframes copied {
+    from {
+      bottom:-60px;
+    }
+    10%{
+      bottom:30px;
+    }
+    90%{
+        bottom:30px;
+    }
+    to  {
+        bottom:-60px;
+    }
+}

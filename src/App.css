@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+:root{
+  --black: #1E1E1E;
+  --dark-black: rgb(20 20 20/1);
+  --blue: #1d3557;
+  --grey: #AFAFAF;
+  --red: rgb(255,50,50);
+  --green:rgb(0, 150, 0);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.icon{
+  height:40px;
+  aspect-ratio: 1 / 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+  text-decoration: none;
+  color:white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+p,h3{
+  margin-block:0;
+}
+
+@media only screen and (max-width:600px) {
+  .icon{
+    height:30px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    transition: 20ms;
+  transform: scale(1);
+
   }
 }
+
+.icon:active, .icon:focus {
+  transform: scale(0.7);
+  transition:20ms;
+}
+
+
+
+.hidden {
+  display:none;
+}
+
+
+.productrow{
+  width: min(1400px, 98%);
+  display: grid;
+  margin-inline: auto;
+  grid-template-rows: 60px 1fr;
+}
+.productrow-header{
+  grid-row:1 / 2;
+  margin-block: auto;
+  font-size:30px;
+  font-weight: 600;
+  color:var(--black);
+}
+
+.productrow-container{
+  width:100%;
+  display:grid;
+  grid-row: 2 / 3;
+  grid-template-columns:  repeat(auto-fit , minmax(300px,1fr));
+  gap: min(20px , 2vw);
+}
+
+input{
+  border:none;
+  outline: none;
+}
+
+input:active{
+  border:none;
+  outline: none!important;
+}
+

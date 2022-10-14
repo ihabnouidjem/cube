@@ -1,0 +1,16 @@
+
+
+.products{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.products-container{
+    width: min(1400px, 98%);
+    margin-inline:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    margin-top:70px;
+    gap: min(20px , 2vw);
+}
